@@ -93,7 +93,7 @@ def fix_notebook(notebook_path):
         # Write the fixed notebook
         try:
             with open(notebook_path, 'w', encoding='utf-8') as f:
-                json.dump(notebook, f, indent=1, ensure_ascii=False)
+                json.dump(notebook, f, indent=2, ensure_ascii=False)
                 f.write('\n')  # Add trailing newline
             print(f"Successfully fixed: {notebook_path}")
             return True
