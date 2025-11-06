@@ -108,7 +108,7 @@ def fix_notebook(notebook_path):
             return False
     else:
         print(f"No malformed widget metadata found in: {notebook_path}")
-        return True  # Success - notebook is already clean
+        return True  # Success - no action needed
 
 
 def main():
