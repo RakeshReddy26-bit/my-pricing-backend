@@ -103,12 +103,12 @@ def fix_notebook(notebook_path):
             try:
                 shutil.copy2(backup_path, notebook_path)
                 print(f"Restored from backup due to write error")
-            except:
-                pass
+            except Exception as restore_error:
+                print(f"Error restoring backup: {restore_error}")
             return False
     else:
         print(f"No malformed widget metadata found in: {notebook_path}")
-        return False
+        return True  # Success - notebook is already clean
 
 
 def main():
